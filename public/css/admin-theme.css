@@ -1,0 +1,70 @@
+/* === ШРИФТЫ === */
+/* Делаем заголовки плотными, как на сайте, но позволяем цвету меняться в темной теме */
+h1, h2, h3, .fi-header-heading {
+    font-weight: 800 !important;
+    letter-spacing: -0.025em;
+    /* Убрали принудительный черный цвет, теперь он будет белым в темной теме */
+}
+
+/* === САЙДБАР (Меню слева) === */
+/* Делаем его темно-серым, а не глухо черным. Это приятнее глазу. */
+.fi-sidebar {
+    background-color: #18181b !important; /* Zinc-900 */
+    border-right: 1px solid #27272a !important; /* Zinc-800 */
+}
+
+/* Ссылки в меню */
+.fi-sidebar-nav-link {
+    color: #a1a1aa !important; /* Zinc-400 (мягкий серый) */
+}
+/* Активная ссылка - белая с легким фоном */
+.fi-sidebar-nav-link-active {
+    background-color: #27272a !important; /* Zinc-800 */
+    color: #ffffff !important;
+}
+.fi-sidebar-nav-link:hover {
+    color: #ffffff !important;
+}
+
+/* === КНОПКИ (Убираем яркость) === */
+/* Основная кнопка (New Product и т.д.) */
+.fi-btn-primary {
+    /* В светлой теме - черная, в темной - белая. Строгий стиль. */
+    background-color: #f4f4f5 !important; /* Zinc-100 */
+    color: #18181b !important; /* Zinc-900 */
+    border: 1px solid #e4e4e7 !important;
+    font-weight: 700 !important;
+    box-shadow: none !important; /* Убираем свечение */
+}
+
+/* При наведении */
+.fi-btn-primary:hover {
+    background-color: #ffffff !important;
+}
+
+/* В ТЕМНОЙ ТЕМЕ (Dark Mode) настройки кнопок */
+:is(.dark) .fi-btn-primary {
+    background-color: #ffffff !important; /* Белая кнопка */
+    color: #000000 !important; /* Черный текст */
+    border: none !important;
+}
+:is(.dark) .fi-btn-primary:hover {
+    background-color: #d4d4d8 !important; /* Чуть серее при наведении */
+}
+
+/* === ОБЩИЙ ФОН И КАРТОЧКИ === */
+/* Делаем рамки тонкими и еле заметными */
+.fi-section, .fi-ta-ctn {
+    box-shadow: none !important;
+    border-radius: 0.75rem !important;
+}
+
+/* Убираем яркие обводки полей ввода */
+.fi-input, .fi-select-input {
+    border-radius: 0.5rem !important;
+}
+/* Активное поле - не синее, а серое */
+.fi-input:focus-within, .fi-select-input:focus-within {
+    border-color: #a1a1aa !important;
+    box-shadow: 0 0 0 1px #a1a1aa !important;
+}
